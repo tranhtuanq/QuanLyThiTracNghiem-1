@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 11, 2023 at 07:19 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 03, 2024 lúc 05:03 PM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tracnghiemonline`
+-- Cơ sở dữ liệu: `tracnghiemonline`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cauhoi`
+-- Cấu trúc bảng cho bảng `cauhoi`
 --
 
 CREATE TABLE `cauhoi` (
@@ -38,7 +38,7 @@ CREATE TABLE `cauhoi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `cauhoi`
+-- Đang đổ dữ liệu cho bảng `cauhoi`
 --
 
 INSERT INTO `cauhoi` (`macauhoi`, `noidung`, `dokho`, `mamonhoc`, `machuong`, `nguoitao`, `trangthai`) VALUES
@@ -583,7 +583,7 @@ INSERT INTO `cauhoi` (`macauhoi`, `noidung`, `dokho`, `mamonhoc`, `machuong`, `n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cautraloi`
+-- Cấu trúc bảng cho bảng `cautraloi`
 --
 
 CREATE TABLE `cautraloi` (
@@ -594,7 +594,7 @@ CREATE TABLE `cautraloi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `cautraloi`
+-- Đang đổ dữ liệu cho bảng `cautraloi`
 --
 
 INSERT INTO `cautraloi` (`macautl`, `macauhoi`, `noidungtl`, `ladapan`) VALUES
@@ -2745,7 +2745,7 @@ INSERT INTO `cautraloi` (`macautl`, `macauhoi`, `noidungtl`, `ladapan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietdethi`
+-- Cấu trúc bảng cho bảng `chitietdethi`
 --
 
 CREATE TABLE `chitietdethi` (
@@ -2755,7 +2755,7 @@ CREATE TABLE `chitietdethi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chitietdethi`
+-- Đang đổ dữ liệu cho bảng `chitietdethi`
 --
 
 INSERT INTO `chitietdethi` (`made`, `macauhoi`, `thutu`) VALUES
@@ -2824,7 +2824,7 @@ INSERT INTO `chitietdethi` (`made`, `macauhoi`, `thutu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietketqua`
+-- Cấu trúc bảng cho bảng `chitietketqua`
 --
 
 CREATE TABLE `chitietketqua` (
@@ -2834,7 +2834,7 @@ CREATE TABLE `chitietketqua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chitietketqua`
+-- Đang đổ dữ liệu cho bảng `chitietketqua`
 --
 
 INSERT INTO `chitietketqua` (`makq`, `macauhoi`, `dapanchon`) VALUES
@@ -4027,6 +4027,20 @@ INSERT INTO `chitietketqua` (`makq`, `macauhoi`, `dapanchon`) VALUES
 (150, 436, NULL),
 (150, 439, NULL),
 (150, 440, NULL),
+(153, 27, NULL),
+(153, 31, NULL),
+(153, 32, NULL),
+(153, 33, NULL),
+(153, 35, NULL),
+(153, 40, NULL),
+(153, 43, NULL),
+(153, 45, NULL),
+(153, 50, NULL),
+(153, 51, NULL),
+(153, 54, NULL),
+(153, 55, NULL),
+(153, 56, NULL),
+(153, 58, NULL),
 (19, 1, 1),
 (29, 1, 2),
 (16, 1, 3),
@@ -4046,6 +4060,7 @@ INSERT INTO `chitietketqua` (`makq`, `macauhoi`, `dapanchon`) VALUES
 (15, 5, 20),
 (43, 6, 21),
 (29, 6, 22),
+(153, 6, 22),
 (30, 6, 24),
 (70, 6, 24),
 (19, 7, 26),
@@ -5882,7 +5897,7 @@ INSERT INTO `chitietketqua` (`makq`, `macauhoi`, `dapanchon`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietnhom`
+-- Cấu trúc bảng cho bảng `chitietnhom`
 --
 
 CREATE TABLE `chitietnhom` (
@@ -5892,7 +5907,7 @@ CREATE TABLE `chitietnhom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chitietnhom`
+-- Đang đổ dữ liệu cho bảng `chitietnhom`
 --
 
 INSERT INTO `chitietnhom` (`manhom`, `manguoidung`, `hienthi`) VALUES
@@ -5961,7 +5976,7 @@ INSERT INTO `chitietnhom` (`manhom`, `manguoidung`, `hienthi`) VALUES
 (11, '3121560080', 1);
 
 --
--- Triggers `chitietnhom`
+-- Bẫy `chitietnhom`
 --
 DELIMITER $$
 CREATE TRIGGER `update_group_participants_after_delete` AFTER DELETE ON `chitietnhom` FOR EACH ROW UPDATE nhom
@@ -5981,7 +5996,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietquyen`
+-- Cấu trúc bảng cho bảng `chitietquyen`
 --
 
 CREATE TABLE `chitietquyen` (
@@ -5991,7 +6006,7 @@ CREATE TABLE `chitietquyen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chitietquyen`
+-- Đang đổ dữ liệu cho bảng `chitietquyen`
 --
 
 INSERT INTO `chitietquyen` (`manhomquyen`, `chucnang`, `hanhdong`) VALUES
@@ -6056,7 +6071,7 @@ INSERT INTO `chitietquyen` (`manhomquyen`, `chucnang`, `hanhdong`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietthongbao`
+-- Cấu trúc bảng cho bảng `chitietthongbao`
 --
 
 CREATE TABLE `chitietthongbao` (
@@ -6065,7 +6080,7 @@ CREATE TABLE `chitietthongbao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chitietthongbao`
+-- Đang đổ dữ liệu cho bảng `chitietthongbao`
 --
 
 INSERT INTO `chitietthongbao` (`matb`, `manhom`) VALUES
@@ -6079,7 +6094,7 @@ INSERT INTO `chitietthongbao` (`matb`, `manhom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chuong`
+-- Cấu trúc bảng cho bảng `chuong`
 --
 
 CREATE TABLE `chuong` (
@@ -6090,7 +6105,7 @@ CREATE TABLE `chuong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chuong`
+-- Đang đổ dữ liệu cho bảng `chuong`
 --
 
 INSERT INTO `chuong` (`machuong`, `tenchuong`, `mamonhoc`, `trangthai`) VALUES
@@ -6118,7 +6133,7 @@ INSERT INTO `chuong` (`machuong`, `tenchuong`, `mamonhoc`, `trangthai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `danhmucchucnang`
+-- Cấu trúc bảng cho bảng `danhmucchucnang`
 --
 
 CREATE TABLE `danhmucchucnang` (
@@ -6127,7 +6142,7 @@ CREATE TABLE `danhmucchucnang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `danhmucchucnang`
+-- Đang đổ dữ liệu cho bảng `danhmucchucnang`
 --
 
 INSERT INTO `danhmucchucnang` (`chucnang`, `tenchucnang`) VALUES
@@ -6148,7 +6163,7 @@ INSERT INTO `danhmucchucnang` (`chucnang`, `tenchucnang`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dethi`
+-- Cấu trúc bảng cho bảng `dethi`
 --
 
 CREATE TABLE `dethi` (
@@ -6174,7 +6189,7 @@ CREATE TABLE `dethi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `dethi`
+-- Đang đổ dữ liệu cho bảng `dethi`
 --
 
 INSERT INTO `dethi` (`made`, `monthi`, `nguoitao`, `tende`, `thoigiantao`, `thoigianthi`, `thoigianbatdau`, `thoigianketthuc`, `hienthibailam`, `xemdiemthi`, `xemdapan`, `troncauhoi`, `trondapan`, `nopbaichuyentab`, `loaide`, `socaude`, `socautb`, `socaukho`, `trangthai`) VALUES
@@ -6195,12 +6210,13 @@ INSERT INTO `dethi` (`made`, `monthi`, `nguoitao`, `tende`, `thoigiantao`, `thoi
 (18, 841464, '3121410422', 'Đề 1', '2023-05-08 16:38:20', 10, '2023-05-08 16:39:00', '2023-05-09 16:50:00', 1, 1, 0, 1, 1, 0, 1, 10, 10, 10, 0),
 (19, 841464, '3121410422', 'Đề 2', '2023-05-08 16:41:10', 10, '2023-05-08 16:41:00', '2023-05-08 16:55:00', 1, 1, 0, 0, 0, 0, 1, 3, 3, 4, 0),
 (20, 841464, '3121410422', 'Đề kiểm tra Lập trình web và ứng dụng nâng cao !', '2023-05-08 16:47:43', 20, '2023-05-08 16:49:00', '2023-05-12 17:21:00', 0, 1, 0, 0, 0, 0, 1, 10, 5, 5, 1),
-(21, 841464, '3121410422', 'Đề thi 100 câu', '2023-05-08 17:04:36', 30, '2023-05-08 17:05:00', '2023-05-08 17:35:00', 0, 1, 0, 0, 0, 0, 1, 40, 30, 30, 1);
+(21, 841464, '3121410422', 'Đề thi 100 câu', '2023-05-08 17:04:36', 30, '2023-05-08 17:05:00', '2023-05-08 17:35:00', 0, 1, 0, 0, 0, 0, 1, 40, 30, 30, 1),
+(22, 841059, '3121410422', 'HK1-Lập Trình Web ', '2024-05-03 20:58:19', 60, '2024-05-02 23:00:00', '2024-05-04 12:00:00', 0, 0, 0, 0, 0, 0, 1, 5, 5, 5, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dethitudong`
+-- Cấu trúc bảng cho bảng `dethitudong`
 --
 
 CREATE TABLE `dethitudong` (
@@ -6209,7 +6225,7 @@ CREATE TABLE `dethitudong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `dethitudong`
+-- Đang đổ dữ liệu cho bảng `dethitudong`
 --
 
 INSERT INTO `dethitudong` (`made`, `machuong`) VALUES
@@ -6279,12 +6295,14 @@ INSERT INTO `dethitudong` (`made`, `machuong`) VALUES
 (21, 30),
 (21, 31),
 (21, 32),
-(21, 33);
+(21, 33),
+(22, 7),
+(22, 23);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `giaodethi`
+-- Cấu trúc bảng cho bảng `giaodethi`
 --
 
 CREATE TABLE `giaodethi` (
@@ -6293,7 +6311,7 @@ CREATE TABLE `giaodethi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `giaodethi`
+-- Đang đổ dữ liệu cho bảng `giaodethi`
 --
 
 INSERT INTO `giaodethi` (`made`, `manhom`) VALUES
@@ -6320,12 +6338,14 @@ INSERT INTO `giaodethi` (`made`, `manhom`) VALUES
 (18, 5),
 (19, 5),
 (20, 11),
-(21, 11);
+(21, 11),
+(22, 2),
+(22, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ketqua`
+-- Cấu trúc bảng cho bảng `ketqua`
 --
 
 CREATE TABLE `ketqua` (
@@ -6340,7 +6360,7 @@ CREATE TABLE `ketqua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `ketqua`
+-- Đang đổ dữ liệu cho bảng `ketqua`
 --
 
 INSERT INTO `ketqua` (`makq`, `made`, `manguoidung`, `diemthi`, `thoigianvaothi`, `thoigianlambai`, `socaudung`, `solanchuyentab`) VALUES
@@ -6477,12 +6497,13 @@ INSERT INTO `ketqua` (`makq`, `made`, `manguoidung`, `diemthi`, `thoigianvaothi`
 (143, 21, '3121410223', 6.8, '2023-05-08 17:05:08', 126, 68, 0),
 (142, 21, '3121410370', 2.3, '2023-05-08 17:05:05', 175, 23, 1),
 (146, 21, '3121560078', 0.3, '2023-05-08 17:05:55', 144, 3, 0),
-(148, 21, '3121560080', 0.2, '2023-05-08 17:06:40', 97, 2, 0);
+(148, 21, '3121560080', 0.2, '2023-05-08 17:06:40', 97, 2, 0),
+(153, 22, '3121410069', 0.67, '2024-05-03 20:59:29', 34, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `monhoc`
+-- Cấu trúc bảng cho bảng `monhoc`
 --
 
 CREATE TABLE `monhoc` (
@@ -6495,7 +6516,7 @@ CREATE TABLE `monhoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `monhoc`
+-- Đang đổ dữ liệu cho bảng `monhoc`
 --
 
 INSERT INTO `monhoc` (`mamonhoc`, `tenmonhoc`, `sotinchi`, `sotietlythuyet`, `sotietthuchanh`, `trangthai`) VALUES
@@ -6509,7 +6530,7 @@ INSERT INTO `monhoc` (`mamonhoc`, `tenmonhoc`, `sotinchi`, `sotietlythuyet`, `so
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nguoidung`
+-- Cấu trúc bảng cho bảng `nguoidung`
 --
 
 CREATE TABLE `nguoidung` (
@@ -6530,7 +6551,7 @@ CREATE TABLE `nguoidung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `nguoidung`
+-- Đang đổ dữ liệu cho bảng `nguoidung`
 --
 
 INSERT INTO `nguoidung` (`email`, `id`, `googleid`, `hoten`, `gioitinh`, `ngaysinh`, `avatar`, `ngaythamgia`, `matkhau`, `trangthai`, `sodienthoai`, `token`, `otp`, `manhomquyen`) VALUES
@@ -6583,7 +6604,7 @@ INSERT INTO `nguoidung` (`email`, `id`, `googleid`, `hoten`, `gioitinh`, `ngaysi
 ('', '3121410023', NULL, 'Tiền Minh Vy', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$9z74EiTcPlaqUL7LNPwzWuHgWMpxMtMB0SVEUzzWCC9JMfTKM36uO', 1, NULL, '', NULL, 11),
 ('', '3121410055', NULL, 'Nguyễn Thế Anh', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$toHJWgczF2JfB08qMFmM3.DFG4HsYkEJbOLjjyr.L.JPMyp2Aey/q', 1, NULL, '1683457910$2y$10$HbKZj90IJkakjGX/U.pfSuuGkdHN5pzGIa9ACUWCANl7UUbY5hHMC', NULL, 11),
 ('hongbao2003@gmail.com', '3121410066', NULL, '4t43t43t', 1, '1990-01-01', NULL, '2023-04-28', '$2y$10$ib0wHQ/FkcyjGoagvnjwreo/iBfxHMNkDH9yUQaZNe6MJdRLApnlS', 1, NULL, '1683470910$2y$10$c2jyxhipFXM36BV2IwieVeqLngFSzXd0rgSOXlfPFqyaS3U7txr..', NULL, 11),
-('musicanime2501@gmail.com', '3121410069', '108675578517307783995', 'Hoàng Gia Bảo', 1, '1990-01-01', NULL, '2023-04-03', '$2y$10$Sl9rcyYDjBHs5jNLWIqODuPm.zZ3DITUzvfh/pUTa/hiAneoAaekm', 1, NULL, '1683519157$2y$10$UMzpMnMb9V0AkncK57t3s.CiFmHehfFIwpsKzgYfmQM1bBmccSDYq', NULL, 10),
+('musicanime2501@gmail.com', '3121410069', '108675578517307783995', 'Hoàng Gia Bảo', 1, '1990-01-01', NULL, '2023-04-03', '$2y$10$Sl9rcyYDjBHs5jNLWIqODuPm.zZ3DITUzvfh/pUTa/hiAneoAaekm', 1, NULL, '1714744759$2y$10$sMucfajKQLv9fKcUiRNJ7eQc18nOkcfjrqbyv1QYTyiwWj/XJPDz2', NULL, 10),
 ('', '3121410070', NULL, 'Hoàng Gia Bảo', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$vMhh29Z7KaXugu31.ptyWuymcy0qOrAg/G/Zl2cJvtTb.xal8/326', 1, NULL, '', NULL, 11),
 ('', '3121410082', NULL, 'Nguyễn Thanh Bình', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$MEyUCDFJg0.2YdxClNvqW.aRcwMICZ0L6W0AtEml/zwidV1/N7ERW', 1, NULL, '', NULL, 11),
 ('', '3121410087', NULL, 'Mai Trung Chỉnh', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$8QsbwByesBJ1ZKJd3NxSsuQzIvTT4W5S7omUnjAna1j50wNqsKEWe', 1, NULL, '', NULL, 11),
@@ -6617,7 +6638,7 @@ INSERT INTO `nguoidung` (`email`, `id`, `googleid`, `hoten`, `gioitinh`, `ngaysi
 ('', '3121410383', NULL, 'Nguyễn Thanh Phong', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$AY3ZFJvjP9fQIt0AKJvZhegoPF8f7ATiM/85KTjlCeAbFxj9K7oee', 1, NULL, '', NULL, 11),
 ('', '3121410401', NULL, 'Trần Như Phú Quang', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$0PJJJ9Xnl0M1JaO6yQC7c.oYfAEg6yH1LdzzoQc2aXMSdJf5lhcvS', 1, NULL, '1683471334$2y$10$ZtS11cScfoYpxyMFBZ2VnuaxCji0jYog0RGQr8V1BM/jsM5sAHbMW', NULL, 11),
 ('', '3121410417', NULL, 'Nguyễn Ngọc Sang', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$MHJV7P1ikocVLk224Qc6Pepqv/Faa.KM0pOpro6X3vs4yQBmkaC7O', 1, NULL, '', NULL, 11),
-('transinh085@gmail.com', '3121410422', '100101229550800922586', 'Trần Nhật Sinh', 1, '2003-12-20', 'avt-642a79bfbf4dd.jpg', '2023-04-03', '$2y$10$F3FQFNZwijEhnKf4EVrkVeaJNtW0icztly.M4sNrHn2GDsT1DsARy', 1, NULL, '1683780315$2y$10$Xx/WCmTf5dE4TmWpSFXaIuJTJAeDppGzc2rMWCjxadie24VQnkgm6', NULL, 1),
+('transinh085@gmail.com', '3121410422', '100101229550800922586', 'Trần Nhật Sinh', 1, '2003-12-20', 'avt-642a79bfbf4dd.jpg', '2023-04-03', '$2y$10$F3FQFNZwijEhnKf4EVrkVeaJNtW0icztly.M4sNrHn2GDsT1DsARy', 1, NULL, '1714744526$2y$10$IprsUZe9D/rRY00MsBaNPufI.SrZNhmI1lVnzGZDJK0nW5SY/pWUC', NULL, 1),
 ('', '3121410425', NULL, 'Nguyễn Ngọc Sơn', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$.G55sVqwn9nX1aSgE6inmONpV3P4oevHQnyl9bi01tIJpGLtC9dGu', 1, NULL, '1683490370$2y$10$dRfCU0tkVOpa3T7vFspPVeXbdQelpu.UYLqD4v.Hb4Ljfwa2c4rVO', NULL, 11),
 ('', '3121410482', NULL, 'Nguyễn Minh Thuận', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$PZ6A6jTsDEv1A3gk1hc/oOfNCYibe7lv0TXHX8a37nNtnQhshFI7G', 1, NULL, '', NULL, 11),
 ('', '3121410531', NULL, 'Võ Thanh Trọng', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$ZV7euI8DbBpDSYEhSnJUAufB27/WmQnQyYucSDGyM8NEwf1ArvhpO', 1, NULL, '', NULL, 11),
@@ -6644,7 +6665,7 @@ INSERT INTO `nguoidung` (`email`, `id`, `googleid`, `hoten`, `gioitinh`, `ngaysi
 ('', '3121560087', NULL, 'Trần Khang Thịnh', NULL, '1990-01-01', NULL, '2023-04-28', '$2y$10$Np0SBktt3LOJcTw7oV5P6.sO4wcTQqYQB6FY4JnwzVCnvU1uRW4j2', 1, NULL, '', NULL, 11);
 
 --
--- Triggers `nguoidung`
+-- Bẫy `nguoidung`
 --
 DELIMITER $$
 CREATE TRIGGER `delete_chitietnhom_by_id` BEFORE DELETE ON `nguoidung` FOR EACH ROW DELETE FROM chitietnhom WHERE chitietnhom.manguoidung = OLD.id
@@ -6654,7 +6675,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nhom`
+-- Cấu trúc bảng cho bảng `nhom`
 --
 
 CREATE TABLE `nhom` (
@@ -6672,7 +6693,7 @@ CREATE TABLE `nhom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `nhom`
+-- Đang đổ dữ liệu cho bảng `nhom`
 --
 
 INSERT INTO `nhom` (`manhom`, `tennhom`, `mamoi`, `siso`, `ghichu`, `namhoc`, `hocky`, `trangthai`, `hienthi`, `giangvien`, `mamonhoc`) VALUES
@@ -6690,7 +6711,7 @@ INSERT INTO `nhom` (`manhom`, `tennhom`, `mamoi`, `siso`, `ghichu`, `namhoc`, `h
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nhomquyen`
+-- Cấu trúc bảng cho bảng `nhomquyen`
 --
 
 CREATE TABLE `nhomquyen` (
@@ -6700,7 +6721,7 @@ CREATE TABLE `nhomquyen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `nhomquyen`
+-- Đang đổ dữ liệu cho bảng `nhomquyen`
 --
 
 INSERT INTO `nhomquyen` (`manhomquyen`, `tennhomquyen`, `trangthai`) VALUES
@@ -6713,7 +6734,7 @@ INSERT INTO `nhomquyen` (`manhomquyen`, `tennhomquyen`, `trangthai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `phancong`
+-- Cấu trúc bảng cho bảng `phancong`
 --
 
 CREATE TABLE `phancong` (
@@ -6722,7 +6743,7 @@ CREATE TABLE `phancong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `phancong`
+-- Đang đổ dữ liệu cho bảng `phancong`
 --
 
 INSERT INTO `phancong` (`mamonhoc`, `manguoidung`) VALUES
@@ -6735,7 +6756,7 @@ INSERT INTO `phancong` (`mamonhoc`, `manguoidung`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thongbao`
+-- Cấu trúc bảng cho bảng `thongbao`
 --
 
 CREATE TABLE `thongbao` (
@@ -6746,7 +6767,7 @@ CREATE TABLE `thongbao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `thongbao`
+-- Đang đổ dữ liệu cho bảng `thongbao`
 --
 
 INSERT INTO `thongbao` (`matb`, `noidung`, `thoigiantao`, `nguoitao`) VALUES
@@ -6756,11 +6777,11 @@ INSERT INTO `thongbao` (`matb`, `noidung`, `thoigiantao`, `nguoitao`) VALUES
 (7, 'okkkk', '2023-05-08 16:53:49', '3121410422');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `cauhoi`
+-- Chỉ mục cho bảng `cauhoi`
 --
 ALTER TABLE `cauhoi`
   ADD PRIMARY KEY (`macauhoi`),
@@ -6769,21 +6790,21 @@ ALTER TABLE `cauhoi`
   ADD KEY `FK_CAUHOI_MONHOC` (`mamonhoc`);
 
 --
--- Indexes for table `cautraloi`
+-- Chỉ mục cho bảng `cautraloi`
 --
 ALTER TABLE `cautraloi`
   ADD PRIMARY KEY (`macautl`),
   ADD KEY `FK_CAUTRALOI_CAUHOI` (`macauhoi`);
 
 --
--- Indexes for table `chitietdethi`
+-- Chỉ mục cho bảng `chitietdethi`
 --
 ALTER TABLE `chitietdethi`
   ADD PRIMARY KEY (`made`,`macauhoi`),
   ADD KEY `FK_CHITIETDETHI_CAUHOI` (`macauhoi`);
 
 --
--- Indexes for table `chitietketqua`
+-- Chỉ mục cho bảng `chitietketqua`
 --
 ALTER TABLE `chitietketqua`
   ADD PRIMARY KEY (`makq`,`macauhoi`),
@@ -6791,61 +6812,61 @@ ALTER TABLE `chitietketqua`
   ADD KEY `FK_CHITIETKETQUA_CAUTRALOI` (`dapanchon`);
 
 --
--- Indexes for table `chitietnhom`
+-- Chỉ mục cho bảng `chitietnhom`
 --
 ALTER TABLE `chitietnhom`
   ADD PRIMARY KEY (`manhom`,`manguoidung`),
   ADD KEY `FK_CHITIETNHOM_NGUOIDUNG` (`manguoidung`);
 
 --
--- Indexes for table `chitietquyen`
+-- Chỉ mục cho bảng `chitietquyen`
 --
 ALTER TABLE `chitietquyen`
   ADD PRIMARY KEY (`manhomquyen`,`chucnang`,`hanhdong`) USING BTREE,
   ADD KEY `hanhdong` (`chucnang`) USING BTREE;
 
 --
--- Indexes for table `chitietthongbao`
+-- Chỉ mục cho bảng `chitietthongbao`
 --
 ALTER TABLE `chitietthongbao`
   ADD PRIMARY KEY (`matb`,`manhom`),
   ADD KEY `FK_CHITIETTHONGBAO_NHOM` (`manhom`);
 
 --
--- Indexes for table `chuong`
+-- Chỉ mục cho bảng `chuong`
 --
 ALTER TABLE `chuong`
   ADD PRIMARY KEY (`machuong`),
   ADD KEY `FK_CHUONG_MONHOC` (`mamonhoc`);
 
 --
--- Indexes for table `danhmucchucnang`
+-- Chỉ mục cho bảng `danhmucchucnang`
 --
 ALTER TABLE `danhmucchucnang`
   ADD PRIMARY KEY (`chucnang`) USING BTREE;
 
 --
--- Indexes for table `dethi`
+-- Chỉ mục cho bảng `dethi`
 --
 ALTER TABLE `dethi`
   ADD PRIMARY KEY (`made`);
 
 --
--- Indexes for table `dethitudong`
+-- Chỉ mục cho bảng `dethitudong`
 --
 ALTER TABLE `dethitudong`
   ADD PRIMARY KEY (`made`,`machuong`),
   ADD KEY `FK_DETHITUDONG_CHUONG` (`machuong`);
 
 --
--- Indexes for table `giaodethi`
+-- Chỉ mục cho bảng `giaodethi`
 --
 ALTER TABLE `giaodethi`
   ADD PRIMARY KEY (`made`,`manhom`),
   ADD KEY `FK_GIAODETHI_NHOM` (`manhom`);
 
 --
--- Indexes for table `ketqua`
+-- Chỉ mục cho bảng `ketqua`
 --
 ALTER TABLE `ketqua`
   ADD PRIMARY KEY (`made`,`manguoidung`),
@@ -6853,20 +6874,20 @@ ALTER TABLE `ketqua`
   ADD KEY `FK_KETQUA_NGUOIDUNG` (`manguoidung`);
 
 --
--- Indexes for table `monhoc`
+-- Chỉ mục cho bảng `monhoc`
 --
 ALTER TABLE `monhoc`
   ADD PRIMARY KEY (`mamonhoc`);
 
 --
--- Indexes for table `nguoidung`
+-- Chỉ mục cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_NGUOIDUNG_NHOMQUYEN` (`manhomquyen`);
 
 --
--- Indexes for table `nhom`
+-- Chỉ mục cho bảng `nhom`
 --
 ALTER TABLE `nhom`
   ADD PRIMARY KEY (`manhom`),
@@ -6874,109 +6895,109 @@ ALTER TABLE `nhom`
   ADD KEY `FK_nhom_monhoc` (`mamonhoc`);
 
 --
--- Indexes for table `nhomquyen`
+-- Chỉ mục cho bảng `nhomquyen`
 --
 ALTER TABLE `nhomquyen`
   ADD PRIMARY KEY (`manhomquyen`);
 
 --
--- Indexes for table `phancong`
+-- Chỉ mục cho bảng `phancong`
 --
 ALTER TABLE `phancong`
   ADD PRIMARY KEY (`mamonhoc`,`manguoidung`),
   ADD KEY `FK_giangday_nguoidung` (`manguoidung`);
 
 --
--- Indexes for table `thongbao`
+-- Chỉ mục cho bảng `thongbao`
 --
 ALTER TABLE `thongbao`
   ADD PRIMARY KEY (`matb`),
   ADD KEY `FK_THONGBAO_NGUOIDUNG` (`nguoitao`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `cauhoi`
+-- AUTO_INCREMENT cho bảng `cauhoi`
 --
 ALTER TABLE `cauhoi`
   MODIFY `macauhoi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=538;
 
 --
--- AUTO_INCREMENT for table `cautraloi`
+-- AUTO_INCREMENT cho bảng `cautraloi`
 --
 ALTER TABLE `cautraloi`
   MODIFY `macautl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2147;
 
 --
--- AUTO_INCREMENT for table `chuong`
+-- AUTO_INCREMENT cho bảng `chuong`
 --
 ALTER TABLE `chuong`
   MODIFY `machuong` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `dethi`
+-- AUTO_INCREMENT cho bảng `dethi`
 --
 ALTER TABLE `dethi`
-  MODIFY `made` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `made` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `ketqua`
+-- AUTO_INCREMENT cho bảng `ketqua`
 --
 ALTER TABLE `ketqua`
-  MODIFY `makq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
+  MODIFY `makq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 
 --
--- AUTO_INCREMENT for table `monhoc`
+-- AUTO_INCREMENT cho bảng `monhoc`
 --
 ALTER TABLE `monhoc`
   MODIFY `mamonhoc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=841465;
 
 --
--- AUTO_INCREMENT for table `nhom`
+-- AUTO_INCREMENT cho bảng `nhom`
 --
 ALTER TABLE `nhom`
   MODIFY `manhom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `nhomquyen`
+-- AUTO_INCREMENT cho bảng `nhomquyen`
 --
 ALTER TABLE `nhomquyen`
   MODIFY `manhomquyen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `thongbao`
+-- AUTO_INCREMENT cho bảng `thongbao`
 --
 ALTER TABLE `thongbao`
   MODIFY `matb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `cauhoi`
+-- Các ràng buộc cho bảng `cauhoi`
 --
 ALTER TABLE `cauhoi`
   ADD CONSTRAINT `FK_CAUHOI_CHUONG` FOREIGN KEY (`machuong`) REFERENCES `chuong` (`machuong`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_CAUHOI_MONHOC` FOREIGN KEY (`mamonhoc`) REFERENCES `monhoc` (`mamonhoc`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `cautraloi`
+-- Các ràng buộc cho bảng `cautraloi`
 --
 ALTER TABLE `cautraloi`
   ADD CONSTRAINT `FK_CAUTRALOI_CAUHOI` FOREIGN KEY (`macauhoi`) REFERENCES `cauhoi` (`macauhoi`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `chitietdethi`
+-- Các ràng buộc cho bảng `chitietdethi`
 --
 ALTER TABLE `chitietdethi`
   ADD CONSTRAINT `FK_CHITIETDETHI_CAUHOI` FOREIGN KEY (`macauhoi`) REFERENCES `cauhoi` (`macauhoi`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_CHITIETDETHI_DETHI` FOREIGN KEY (`made`) REFERENCES `dethi` (`made`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `chitietketqua`
+-- Các ràng buộc cho bảng `chitietketqua`
 --
 ALTER TABLE `chitietketqua`
   ADD CONSTRAINT `FK_CHITIETKETQUA_CAUHOI` FOREIGN KEY (`macauhoi`) REFERENCES `cauhoi` (`macauhoi`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -6984,67 +7005,67 @@ ALTER TABLE `chitietketqua`
   ADD CONSTRAINT `FK_CHITIETKETQUA_KETQUA` FOREIGN KEY (`makq`) REFERENCES `ketqua` (`makq`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `chitietnhom`
+-- Các ràng buộc cho bảng `chitietnhom`
 --
 ALTER TABLE `chitietnhom`
   ADD CONSTRAINT `FK_CHITIETNHOM_NHOM` FOREIGN KEY (`manhom`) REFERENCES `nhom` (`manhom`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_chitietnhom_nguoidung` FOREIGN KEY (`manguoidung`) REFERENCES `nguoidung` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `chitietquyen`
+-- Các ràng buộc cho bảng `chitietquyen`
 --
 ALTER TABLE `chitietquyen`
   ADD CONSTRAINT `FK_CHITIETQUYEN_NHOMQUYEN` FOREIGN KEY (`manhomquyen`) REFERENCES `nhomquyen` (`manhomquyen`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `chitietquyen_ibfk_1` FOREIGN KEY (`chucnang`) REFERENCES `danhmucchucnang` (`chucnang`);
 
 --
--- Constraints for table `chitietthongbao`
+-- Các ràng buộc cho bảng `chitietthongbao`
 --
 ALTER TABLE `chitietthongbao`
   ADD CONSTRAINT `FK_CHITIETTHONGBAO_NHOM` FOREIGN KEY (`manhom`) REFERENCES `nhom` (`manhom`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_CHITIETTHONGBAO_THONGBAO` FOREIGN KEY (`matb`) REFERENCES `thongbao` (`matb`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `chuong`
+-- Các ràng buộc cho bảng `chuong`
 --
 ALTER TABLE `chuong`
   ADD CONSTRAINT `FK_CHUONG_MONHOC` FOREIGN KEY (`mamonhoc`) REFERENCES `monhoc` (`mamonhoc`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `dethitudong`
+-- Các ràng buộc cho bảng `dethitudong`
 --
 ALTER TABLE `dethitudong`
   ADD CONSTRAINT `FK_DETHITUDONG_CHUONG` FOREIGN KEY (`machuong`) REFERENCES `chuong` (`machuong`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_DETHITUDONG_DETHI` FOREIGN KEY (`made`) REFERENCES `dethi` (`made`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `giaodethi`
+-- Các ràng buộc cho bảng `giaodethi`
 --
 ALTER TABLE `giaodethi`
   ADD CONSTRAINT `FK_GIAODETHI_DETHI` FOREIGN KEY (`made`) REFERENCES `dethi` (`made`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_GIAODETHI_NHOM` FOREIGN KEY (`manhom`) REFERENCES `nhom` (`manhom`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `ketqua`
+-- Các ràng buộc cho bảng `ketqua`
 --
 ALTER TABLE `ketqua`
   ADD CONSTRAINT `FK_KETQUA_DETHI` FOREIGN KEY (`made`) REFERENCES `dethi` (`made`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_ketqua_nguoidung` FOREIGN KEY (`manguoidung`) REFERENCES `nguoidung` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `nguoidung`
+-- Các ràng buộc cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
   ADD CONSTRAINT `FK_NGUOIDUNG_NHOMQUYEN` FOREIGN KEY (`manhomquyen`) REFERENCES `nhomquyen` (`manhomquyen`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `nhom`
+-- Các ràng buộc cho bảng `nhom`
 --
 ALTER TABLE `nhom`
   ADD CONSTRAINT `FK_nhom_monhoc` FOREIGN KEY (`mamonhoc`) REFERENCES `monhoc` (`mamonhoc`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `phancong`
+-- Các ràng buộc cho bảng `phancong`
 --
 ALTER TABLE `phancong`
   ADD CONSTRAINT `FK_giangday_monhoc` FOREIGN KEY (`mamonhoc`) REFERENCES `monhoc` (`mamonhoc`) ON DELETE NO ACTION ON UPDATE NO ACTION,
